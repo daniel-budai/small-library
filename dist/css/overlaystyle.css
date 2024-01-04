@@ -1,0 +1,233 @@
+body {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: #222222;
+}
+
+.bookinfo {
+  max-width: 1000px;
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.bookinfo header {
+  grid-column: auto / span 2;
+  height: 3rem;
+  padding: 1rem;
+}
+
+.close {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: self-end;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 99%;
+  border: none;
+}
+
+.close:hover {
+  background: white;
+}
+
+.bookinfo > section {
+  grid-column: auto / span 1;
+  padding: 1rem;
+}
+
+.bookinfo > .display {
+  display: flex;
+  justify-content: center;
+}
+
+.bookinfo > .info {
+  padding: 0 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookinfo .info h1 {
+  font-size: 2.6rem;
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+}
+
+.bookinfo .info h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.4rem 0 0 0;
+  padding: 0;
+}
+
+.bookinfo .info > p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 160%;
+  padding: 0.4rem 0;
+}
+
+.bookinfo .info footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin: auto 0 6rem 0;
+}
+
+.bookinfo .info footer p {
+  margin: 0.25rem 0;
+}
+
+.book {
+  width: 24rem;
+  height: 28rem;
+}
+
+.book section {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.book .content {
+  display: flex;
+  border-radius: inherit;
+}
+
+.content aside {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.3) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 0.6rem;
+  margin: 0 0 0 1.5rem;
+}
+
+.book .content > section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 1.4rem;
+}
+
+.book .content > section h2 {
+  color: #000000cc;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 120%;
+  margin: 0;
+}
+
+.book .content > section h3 {
+  color: #000000cc;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0.25rem 0 0 0;
+}
+
+.overlay[data-book="Madeline"] .content {
+  background: linear-gradient(23deg, #f2c94c, #f2c94c4f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="The Tale of Peter Rabbit"] .content {
+  background: linear-gradient(23deg, #f2994a, #f2994a4f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="Charlotte’s Web "] .content {
+  background: linear-gradient(23deg, #eb5757, #eb57574f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="Harold and the Purple Crayon"] .content {
+  background: linear-gradient(23deg, #9b51e0, #9b51e04f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="Where the Wild Things Are"] .content {
+  background: linear-gradient(23deg, #56ccf2, #56ccf24f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="Goodnight Moon"] .content {
+  background: linear-gradient(23deg, #2f80ed, #2f80ed4f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="A Wrinkle in Time"] .content {
+  background: linear-gradient(23deg, #6fcf97, #6fcf974f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+.overlay[data-book="The Very Hungry Caterpillar"] .content {
+  background: linear-gradient(23deg, #27ae60, #27ae604f),
+    linear-gradient(
+      208.29deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 92.13%
+    );
+}
+
+#readitButton {
+  background-color: #eeeeee;
+  width: 164px;
+  height: 43px;
+  top: 520px;
+  left: 659px;
+  border-radius: 4px;
+  position: absolute;
+}
